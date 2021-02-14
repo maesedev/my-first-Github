@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:wght@300&display=swap');
+
+*{
+	user-select:none;
+	margin: 0;
+	padding: 0;
+	font-size: 20px;
+	box-sizing: border-box;
+}
+body{
+	background: #545454;
+	color: #fff;
+	padding: 40px;
+	padding-top: 0;
+	font-family: Open Sans;
+}
+
+h1{
+	text-align: center;
+	text-transform: uppercase;
+	color: #012; 
+    font-size: 30px;
+}
+
+
+#container{
+	display: inline-flex;
+    flex-direction: column;
+}
+.inputs-crear,
+.inputs-edit,
+.inputs-delete{ 
+	position: absolute;
+	display: none;
+
+}
+.inputs-crear{
+	background: #263;
+	padding: 10px;
+	border-radius: 0 10px 10px 10px  
+}
+.inputs-edit{
+	background: #05b;
+	padding: 10px;
+	border-radius: 0 10px 10px 10px  ;
+	max-width: 200px;
+}
+.inputs-delete{
+	background: #a11;
+	padding: 10px;
+	border-radius: 0 10px 10px 10px;
+	max-width: 200px; 
+}
+
+#contactos{
+	
+	justify-content: center;
+	border-radius: 15px;
+	color: #333;
+	flex-wrap: wrap;
+	height: 100%;
+	min-width: 400px;
+	background: rgb(140, 140, 140);
+	padding: 30px;
+
+}
+.contacto{
+	transition: 1s opacity ease;
+	min-width: 300px;
+	margin: 10px;
+	overflow: hidden;
+	border-radius: 30px;
+	background: linear-gradient(rgb(210,210,210),rgb(230,230,230));
+	padding: 30px;
+
+	position: relative;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.contacto:active{
+	background: #bbc;
+	border: 3px solid #445;
+	box-shadow: 0 0 10px #445;
+}
+.posicion{
+	position: absolute;
+	left:70%;
+	background: #aaa;
+	padding:10px 15px; 
+	border-radius: 26px;
+}
+.botones{
+
+	display: flex;
+	justify-content: space-between;
+
+}
+.create{
+	background: #5c5
+}
+.submit-create{
+	margin-left: 3px; 
+
+}
+
+.submit-create,
+.submit-edit,
+.submit-delete,
+.create,.edit,
+.delete,.buscar{
+	cursor: pointer;
+}
+
+.submit-create,
+.submit-edit,
+.submit-delete{
+
+	padding:0 10px;
+}
+
+.edit{
+	background: #17f;
+
+
+}
+.buscar{
+	display: inline-block;
+	margin: 5px 0;
+	background: #17ff
+}
+.delete{
+	background:#f23 
+}
+
+.boton-item{
+	margin-top: 1em; 
+	padding: .4em;
+	border-radius: .3em;
+	font-size: 1em;
+}
+
+.index{
+	width: 100px;
+}
+
+
+.delete:hover,.edit:hover,.create:hover,.buscar:hover{
+	background: #555;
+	color: #ccc;
+
+}
+
+ .delete:active,
+ .edit:active,
+ .create:active{
+	background: #ff0;
+	color: #ccc;
+}
+
+ .delete:focus,
+ .edit:focus,
+ .create:focus{
+ 	outline: none;
+ }
+
+
+.nombre,.numero,.correo{
+	margin: 3px;
+	width: 100%;
+}
+
+.boton-general{
+	border-radius: 10px 10px 0 0;
+	
+	width: 150px;
+	display: inline-block;
+}
+
+.btn-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.create-div,.edit-div,.delete-div{
+	display: inline-block;
+	margin:25px;
+}
+
+
+
+.errores i ,.errores i span{
+	color:#f00;
+	font-size: 15px;
+	text-align: center;
+	padding: 5px;
+}
+
+
+#opciones{
+	min-height: 10px;
+	max-height: 200px;
+	padding: 15px;
+	position: sticky;
+	background: #545454;
+	top:0;
+	z-index: 1
+}
+
+
+.link-selected{
+	position: absolute;
+	top: 0;
+	left: 30%;
+	text-align: center;
+	background: #4b4;
+	color:#282;
+	padding: 3px;
+	border-radius: 0 0 10px 10px;
+	letter-spacing: 5px; 
+}

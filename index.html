@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css.css">
+	<title>aprendamos js</title>
+	<script src="https://kit.fontawesome.com/08e2281594.js" crossorigin="anonymous"></script>
+</head>
+<body >
+
+	<div id="container">
+		<h1>Crea tus contactos en Js</h1>
+		<div class="errores"></div>
+		<div id="opciones">
+			<div class="create-div">
+				<button onclick="showCreate()" class="boton-general create">Create</button>
+				<div class="inputs-crear">
+					<input type="text"  placeholder="Nombre" class="nombre">
+					<input type="number"  placeholder="Numero" class="numero">
+					<input type="email"  placeholder="Correo" class="correo">
+					<div class="btn-container">
+						<button onclick="crearElementoSubmit()" class="submit-create submit create">Create</button>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="edit-div">
+				<button onclick="showEdit()"  class="boton-general edit">Edit</button>
+				<div class="inputs-edit">
+					<div class="inputs-buscar">
+						<input type="number" min="1" max placeholder="Posición"  class="index">
+						<button type="button" onclick="buscarIndice()" class="submit buscar">Buscar</button>
+					</div>
+					<input type="text"  placeholder="Nombre" class="nombre">
+					<input type="number"  placeholder="Numero" class="numero">
+					<input type="email"  placeholder="Correo" class="correo">
+					<div class="btn-container">
+						<button onclick="" class="submit-edit submit edit">Edit</button>
+					</div>
+					
+				</div>
+			</div>
+
+			<div class="delete-div ">
+				<button onclick="deleteContactoVarios()"  class="boton-general delete">Delete</button>
+
+				<div class="inputs-delete">
+					<input type="number" min="1" max placeholder="Posición"  class="index">
+					<button oncancel="deleteContacto()" type="button" class=" submit buscar delete ">Delete</button>
+				</div>
+			
+
+			</div>
+		</div>
+
+		<div id="contactos"></div>
+
+	</div>
+	<script src="js.js"></script>
+</body>
+</html>
+
