@@ -156,7 +156,7 @@ seleccionarVarios = (indice) =>{
 
 		}
 	}
-	returned = [document.querySelectorAll('[active="true"]'),contactosSelectedAll];
+	returned = [document.querySelectorAll('[active="true"]'),contactosSelectedAll,console.log(contactosSelectedAll)];
 
 	return returned
 }
@@ -176,20 +176,22 @@ deleteContactoVarios =()=>{
 			 		let id = contactos_id[0][elementos1].getAttribute('id');
 
 			 		for(elementos2 in returned[1]){
-			 			if(id == returned[1][elementos2] ){
-
+			 			if(id == returned[1][elementos2]){
 			 				//estilos al remover
 			 				contactos_id[0][elementos1].style.opacity = "0";
-
 			 			 	contactos_id[0][elementos1].remove();
 			 			 	contactos_id[0].splice(elementos1,1);
 			 			 	contactos_id[1].splice(elementos1,1);
 			 			 	console.log(`El elemento con la id: ${id}, fue removido`);
 			 			 	document.querySelector('.inputs-delete').style.display = 'none';
 			 			}
-			 			if(returned[1].length==0)break
+
 			 		}
 			 	}
+
+
+
+
 			 }
 			}
 			
@@ -218,6 +220,7 @@ deleteContacto = (indice)=>{
 	if(contactos_id[0].length == 0)document.getElementById("contactos").style.display = 'none';
 	}
 	else showError('se canceló el proceso de eliminación');
+	e.stopPropagation()
 }
 
 editContacto = ()=>{
@@ -264,7 +267,7 @@ crearContacto = (nombre,numeroTelefono,CorreElectronico)=>{
 
 	let deleteButton = document.createElement('BUTTON');
 	deleteButton.classList.add('boton-item','delete','fas','fa-trash-alt');
-	deleteButton.addEventListener('click',()=>deleteContacto(a.getAttribute("id")));
+	deleteButton.addEventListener('click',(e)=>deleteContacto(a.getAttribute("id")));
 	deleteButton.textContent = 'Delete';
 
 
