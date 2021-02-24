@@ -171,17 +171,19 @@ deleteContactoVarios =()=>{
 			 if(bool){
 			 	// recorre el array de Contactos_id para que elimine los elementos 
 			 	//solo si coincide con el id que nos devolvio 
-			 	for(elementos1 in contactos_id[0] ){
+			 	for(let revision_en_contactos in contactos_id[0] ){
 			 		
-			 		let id = contactos_id[0][elementos1].getAttribute('id');
+			 		let id = contactos_id[0][revision_en_contactos].getAttribute('id');
 
-			 		for(elementos2 in returned[1]){
-			 			if(id == returned[1][elementos2]){
+			 		for(let elementos2 in returned[0]){
+
+			 			let comparador = returned[0][elementos2]
+			 			if(id == comparador.getAttribute('id') ){
 			 				//estilos al remover
-			 				contactos_id[0][elementos1].style.opacity = "0";
-			 			 	contactos_id[0][elementos1].remove();
-			 			 	contactos_id[0].splice(elementos1,1);
-			 			 	contactos_id[1].splice(elementos1,1);
+			 				contactos_id[0][revision_en_contactos].style.opacity = "0";
+			 			 	contactos_id[0][revision_en_contactos].remove();
+			 			 	contactos_id[0].splice(revision_en_contactos,1);
+			 			 	contactos_id[1].splice(revision_en_contactos,1);
 			 			 	console.log(`El elemento con la id: ${id}, fue removido`);
 			 			 	document.querySelector('.inputs-delete').style.display = 'none';
 			 			}
