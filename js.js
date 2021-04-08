@@ -186,6 +186,7 @@ deleteContactoVarios =()=>{
 			 			 	contactos_id[1].splice(revision_en_contactos,1);
 			 			 	console.log(`El elemento con la id: ${id}, fue removido`);
 			 			 	document.querySelector('.inputs-delete').style.display = 'none';
+			 			 	break
 			 			}
 
 			 		}
